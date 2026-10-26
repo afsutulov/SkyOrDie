@@ -7,8 +7,8 @@ import (
 	"image"
 	"image/color"
 	"image/draw"
-	"skyofdie/assets"
-	"skyofdie/internal/game"
+	"skyordie/assets"
+	"skyordie/internal/game"
 	"sort"
 	"strings"
 )

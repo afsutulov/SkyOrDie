@@ -10,10 +10,10 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"skyofdie/assets"
-	"skyofdie/internal/controls"
-	"skyofdie/internal/game"
-	"skyofdie/internal/render"
+	"skyordie/assets"
+	"skyordie/internal/controls"
+	"skyordie/internal/game"
+	"skyordie/internal/render"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/inpututil"
@@ -168,7 +168,7 @@ func main() {
 	ticks := flag.Int("ticks", 0, "exit after this many ticks (smoke testing)")
 	flag.Parse()
 	if *showVersion {
-		fmt.Println("SkyOfDie", version)
+		fmt.Println("SkyOrDie", version)
 		return
 	}
 	data, err := assets.Load()
@@ -179,7 +179,7 @@ func main() {
 	if err != nil {
 		cfg = "."
 	}
-	savePath := filepath.Join(cfg, "SkyOfDie", "settings.json")
+	savePath := filepath.Join(cfg, "SkyOrDie", "settings.json")
 	save := readSave(savePath)
 	model := game.New(&data.Config, save)
 	if *event >= 1 && *event <= 5 {
@@ -194,11 +194,11 @@ func main() {
 	defer sound.close()
 	app := &application{model: model, renderer: render.New(data), sound: sound, canvas: ebiten.NewImage(320, 200), savePath: savePath, limitTicks: *ticks}
 	ebiten.SetTPS(240)
-	ebiten.SetWindowTitle("SkyOfDie")
+	ebiten.SetWindowTitle("SkyOrDie")
 	ebiten.SetWindowSize(320*max(1, min(6, *scale)), 240*max(1, min(6, *scale)))
 	ebiten.SetWindowResizingMode(ebiten.WindowResizingModeEnabled)
 	ebiten.SetFullscreen(*fullscreen)
-	if b, e := assets.FS.Open("icon/SkyOfDie.png"); e == nil {
+	if b, e := assets.FS.Open("icon/SkyOrDie.png"); e == nil {
 		if icon, _, e := image.Decode(b); e == nil {
 			ebiten.SetWindowIcon([]image.Image{icon})
 		}

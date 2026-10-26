@@ -10,7 +10,7 @@ import (
 	_ "image/png"
 	"io/fs"
 	"path"
-	"skyofdie/internal/game"
+	"skyordie/internal/game"
 )
 
 //go:embed images/*.png images/*.json sprites/*.png sprites/atlas.json audio/*.wav audio/*.ogg icon/*.png snow.json downhill.json tube.json stunts.json frontend.json

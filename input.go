@@ -3,8 +3,8 @@ package main
 import (
 	"strings"
 
-	"skyofdie/internal/controls"
-	"skyofdie/internal/game"
+	"skyordie/internal/controls"
+	"skyordie/internal/game"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/inpututil"

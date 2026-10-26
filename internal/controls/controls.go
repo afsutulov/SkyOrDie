@@ -4,7 +4,7 @@ package controls
 
 import (
 	"math"
-	"skyofdie/internal/game"
+	"skyordie/internal/game"
 )
 
 type Keyboard struct {

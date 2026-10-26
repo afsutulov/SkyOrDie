@@ -1,8 +1,8 @@
-# SkyOfDie
+# Sky or Die
 
 [Русский](README.ru.md)
 
-SkyOfDie is a native Go recreation of the DOS winter sports game **Ski or Die**. Play Snowball Blast, Downhill Blitz, Acro Aerials, Innertube Thrash, and Snowboard Halfpipe in Practice or compete with up to six players taking turns. Innertube Thrash supports two simultaneous riders.
+Sky or Die is a native Go recreation of the DOS winter sports game **Ski or Die**. Play Snowball Blast, Downhill Blitz, Acro Aerials, Innertube Thrash, and Snowboard Halfpipe in Practice or compete with up to six players taking turns. Innertube Thrash supports two simultaneous riders.
 
 Gameplay runs in Go without a runtime emulator. Original artwork, maps, music, and effects are included as PNG, JSON, Ogg Vorbis, and WAV resources. Supports Windows, Linux, and macOS on amd64 and arm64.
 
@@ -48,7 +48,7 @@ WASD is disabled during an event if the current player or a simultaneous second 
 
 Keyboard/gamepad directions take priority over mouse steering. Move the mouse again to resume it. Middle-click or **P** pauses. Right-click in menus acts as Escape; click **YES/NO** on the replay screen.
 
-**Esc** opens event standings during competition, the replay question during practice, and the quit query in the shop/resort. **Ctrl+M** toggles sound, **F11** toggles fullscreen, and **F12** saves a screenshot. Settings, records, and captured screenshots are stored in the OS user configuration directory under `SkyOfDie`.
+**Esc** opens event standings during competition, the replay question during practice, and the quit query in the shop/resort. **Ctrl+M** toggles sound, **F11** toggles fullscreen, and **F12** saves a screenshot. Settings, records, and captured screenshots are stored in the OS user configuration directory under `SkyOrDie`.
 
 ## Build and run
 
@@ -60,27 +60,6 @@ go run .
 ```
 
 The first build requires internet access for Go dependencies. No C compiler or DOS installation is required. Linux needs a desktop graphics session (X11 or XWayland).
-
-Build for the current system:
-
-```sh
-go run ./cmd/build
-```
-
-Build all six targets, or choose one:
-
-```sh
-go run ./cmd/build -all
-go run ./cmd/build -os windows -arch arm64
-```
-
-| System | amd64 output | arm64 output |
-| --- | --- | --- |
-| Windows | `build/windows-amd64/SkyOfDie.exe` | `build/windows-arm64/SkyOfDie.exe` |
-| Linux | `build/linux-amd64/SkyOfDie` | `build/linux-arm64/SkyOfDie` |
-| macOS | `build/darwin-amd64/SkyOfDie.app` | `build/darwin-arm64/SkyOfDie.app` |
-
-The builder embeds the Windows icon and packages the macOS app with its icon. Icon files are in `assets/icon`.
 
 PC Speaker audio is the default. Run `go run . -adlib` for the AdLib arrangement. Other options include `-nosound`, `-fullscreen`, and `-scale 3`.
 

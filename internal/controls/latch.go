@@ -1,6 +1,6 @@
 package controls
 
-import "skyofdie/internal/game"
+import "skyordie/internal/game"
 
 // Latch retains one-shot events between desktop updates and original PIT steps.
 func Latch(in *game.Input, old game.Input) {

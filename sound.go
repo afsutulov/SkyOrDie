@@ -4,8 +4,8 @@ import (
 	"bytes"
 	"io"
 	"log"
-	"skyofdie/assets"
-	"skyofdie/internal/game"
+	"skyordie/assets"
+	"skyordie/internal/game"
 
 	"github.com/hajimehoshi/ebiten/v2/audio"
 	"github.com/hajimehoshi/ebiten/v2/audio/vorbis"

@@ -1,4 +1,4 @@
-module skyofdie
+module skyordie
 
 go 1.25.0
 
